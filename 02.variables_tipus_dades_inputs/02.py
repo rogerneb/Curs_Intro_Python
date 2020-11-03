@@ -12,9 +12,9 @@ print("Booleans: ",d,e,f)
 
 #Cadenes de text.
 g = "Estic programant en Python!"
-print("La cadena és: ",g)
+print("La cadena és: "+g) #concatenem cadenes amb +
 #podem partir les cadenes com si fos una llista. En parlarem més endavant de les llistes
-print("La tercera lletra de la cadena és: ",g[2]) #posició 2 de la cadena
+print("La tercera lletra de la cadena és: "+g[2]) #posició 2 de la cadena
 
 #podem imprimir un tros de la cadena usant el format posició inicial:final.
 print(g[7:11]) #posició 7 i posició 11 no inclòses.
