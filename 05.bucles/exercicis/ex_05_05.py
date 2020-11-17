@@ -20,4 +20,4 @@ while user_num != num_rand: #mentre no endevinem el número...
 else: #els while també poden tenir else.
 	print("Has necessitat "+str(intents)+" intents") #mostrem els intents
 
-#puc utilitzar la funció str() per convertir els ints a enter i concatenar millor la variable amb el text.
+#puc utilitzar la funció str() per convertir els ints a string i concatenar millor la variable amb el text.

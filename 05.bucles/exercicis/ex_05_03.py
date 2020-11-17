@@ -1,7 +1,9 @@
+import random #importem la llibreria per crear números random
+
 num = 0 #num actual
 pas = 0 #de quants en quants anirem
 max = 0	#num més gran
-min = 0  #num mes petit
+min = 0 #num més petit
 
 #Demanem el max i el min
 while (max < min or max == min):
@@ -24,8 +26,5 @@ while (pas == 0 or pas > max):
 while (min <= max):
 	print(min)
 	min += pas
-
-
-
 
 input("\nPress ENTER")
