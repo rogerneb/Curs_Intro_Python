@@ -4,7 +4,7 @@ Exercici de resum per a consolidar coneixements.
 
 És un generador de contrasenyes.
 L'usuari introdueix el núm de minúscules, manjúscules, números i caràcters especials
-i l'script li genera una contrasenya random.
+i l'script genera tantes contrasenyes com li demanem
 '''
 
 import random #importem la llibreria per crear números random
