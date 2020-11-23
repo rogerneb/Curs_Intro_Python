@@ -3,7 +3,7 @@ PASSWORD GENERATOR V1.0
 Exercici de resum per a consolidar coneixements.
 
 És un generador de contrasenyes.
-L'usuari introdueix el núm de minúscules, manjúscules i caràcters especials
+L'usuari introdueix el núm de minúscules, manjúscules, números i caràcters especials
 i l'script li genera una contrasenya random.
 '''
 
@@ -21,6 +21,7 @@ special = "!¡?¿()$%&"
 #variables de la contrasenya
 qminus = -1 #quantes minuscules volem
 qmayus = 0 #quantes mayusvolem
+qnums = 0 #quants nums volem
 qspecial = 0 #quants caràcters especials volem
 
 resposta = "N" #resposta a una pregunta tipus Y/N
@@ -44,6 +45,14 @@ while qmayus <= 0 or qmayus > 10: #mínim 0 màxim 10
     elif(qmayus <= 0):
         print("Mínim 1 caràcter.")
 
+#Demanem els nums
+while qnums <= 0 or qnums > 10: #mínim 0 màxim 10
+    qnums = int(input("Números: "))
+    if (qnums > 10):
+        print("Màxim 10 números")
+    elif(qnums <= 0):
+        print("Mínim 1 número")
+
 #Demanem els caràcters especials
 while qspecial <= 0 or qspecial > 10: #mínim 0 màxim 10
     qspecial = int(input("Caràcters especials: "))
@@ -51,6 +60,7 @@ while qspecial <= 0 or qspecial > 10: #mínim 0 màxim 10
         print("Màxim 10 caràcters.")
     elif(qspecial <= 0):
         print("Mínim 1 caràcter.")
+
 
 
 #COMENCEM A GENERAR LA CONTRASENYA
@@ -65,6 +75,11 @@ if qpasswords > 1000: #si l'user posa més de 1000, assignem 1000
 elif qpasswords < 1: #si l'user posa menys de 1, assignem 1
     qpasswords = 1
 
+'''
+per fer randoms utilitzem:
+int(numero_maxim * random.random() + numero_minim)
+'''
+
 for m in range (0, qpasswords): #generem tantes contrasenyes com s'han demanat
     #minúscules
     for n in range (0, qminus): #des de 0 fins al total de minuscules solicitades
@@ -72,6 +87,9 @@ for m in range (0, qpasswords): #generem tantes contrasenyes com s'han demanat
     #majuscules
     for n in range (0, qmayus): #des de 0 fins al total de majuscules solicitades
         password = password + mayus[int(len(mayus) * random.random())] #concatenem posicions random de la cadena de majuscules
+        #majuscules
+    for n in range (0, qnums): #des de 0 fins al total de nums solicitats. Nums entre 0 i 9
+        password = password + str(int(9 * random.random())) #concatenem posicions random de la cadena de majuscules
     #especials
     for n in range (0, qspecial): #des de 0 fins al total d'escpecials solicitats
         password = password + special[int(len(special) * random.random())] #concatenem posicions random de la cadena d'especials
