@@ -4,7 +4,7 @@ Exercici de resum per a consolidar coneixements.
 
 És un generador de contrasenyes.
 L'usuari introdueix el núm de minúscules, manjúscules, números i caràcters especials
-i l'script li genera una contrasenya random.
+i l'script li genera el nombre de contrasenyes que demani
 '''
 
 import random #importem la llibreria per crear números random
@@ -24,13 +24,11 @@ qmayus = 0 #quantes mayusvolem
 qnums = 0 #quants nums volem
 qspecial = 0 #quants caràcters especials volem
 
-resposta = "N" #resposta a una pregunta tipus Y/N
-
 print("Benvingut al PASSWORD GENERATOR V1.0: ")
 print("A continuació has de definir el número de caràcters de la contrasenya.")
 
 #Demanem les minúscules
-while qminus <= 0 or qminus > 10: #mínim 1 màxim 10
+while qminus < 1 or qminus > 10: #mínim 1 màxim 10
     qminus = int(input("Minúscules: "))
     if (qminus > 10):
         print("Màxim 10 caràcters.")
@@ -38,7 +36,7 @@ while qminus <= 0 or qminus > 10: #mínim 1 màxim 10
         print("Mínim 1 caràcter.")
 
 #Demanem les majúscules
-while qmayus <= 0 or qmayus > 10: #mínim 1 màxim 10
+while qmayus < 1 or qmayus > 10: #mínim 1 màxim 10
     qmayus = int(input("Majúscules: "))
     if (qmayus > 10):
         print("Màxim 10 caràcters.")
@@ -46,7 +44,7 @@ while qmayus <= 0 or qmayus > 10: #mínim 1 màxim 10
         print("Mínim 1 caràcter.")
 
 #Demanem els nums
-while qnums <= 0 or qnums > 10: #mínim 1 màxim 10
+while qnums < 1 or qnums > 10: #mínim 1 màxim 10
     qnums = int(input("Números: "))
     if (qnums > 10):
         print("Màxim 10 números")
@@ -54,7 +52,7 @@ while qnums <= 0 or qnums > 10: #mínim 1 màxim 10
         print("Mínim 1 número")
 
 #Demanem els caràcters especials
-while qspecial <= 0 or qspecial > 10: #mínim 1 màxim 10
+while qspecial < 1 or qspecial > 10: #mínim 1 màxim 10
     qspecial = int(input("Caràcters especials: "))
     if (qspecial > 10):
         print("Màxim 10 caràcters.")
