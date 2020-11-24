@@ -85,7 +85,7 @@ for m in range (0, qpasswords): #generem tantes contrasenyes com s'han demanat
     #majuscules
     for n in range (0, qmayus): #des de 0 fins al total de majuscules solicitades
         password = password + mayus[int(len(mayus) * random.random())] #concatenem posicions random de la cadena de majuscules
-        #majuscules
+    #números
     for n in range (0, qnums): #des de 0 fins al total de nums solicitats. Nums entre 0 i 9
         password = password + str(int(9 * random.random())) #concatenem posicions random de la cadena de majuscules
     #especials
